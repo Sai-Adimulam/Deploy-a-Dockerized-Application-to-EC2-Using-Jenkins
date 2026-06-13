@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('github') {
             steps {
-                git url: 'https://github.com/Sai-Adimulam/Deploy-a-Dockerized-Application-to-EC2-Using-Jenkins'
+                git branch: 'main',
+                url: 'https://github.com/Sai-Adimulam/Deploy-a-Dockerized-Application-to-EC2-Using-Jenkins'
             }
         }
 
