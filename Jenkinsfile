@@ -11,19 +11,19 @@ pipeline {
 
         stage('Build Docker') {
             steps {
-                bat 'docker build -t my-app .'
+                sh 'docker build -t my-app .'
             }
         }
 
         stage('Tag Image') {
             steps {
-                bat 'docker tag my-app adimulam22/my-app:latest'
+                sh 'docker tag my-app adimulam22/my-app:latest'
             }
         }
 
         stage('Push Image') {
             steps {
-                bat 'docker push adimulam22/my-app:latest'
+                sh 'docker push adimulam22/my-app:latest'
             }
         }
     }
